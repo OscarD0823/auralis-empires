@@ -1,0 +1,133 @@
+{
+  "empires": {
+    "repo": "socialemperors",
+    "config": "game_config.json",
+    "folder": "buildingsprites",
+    "buildings": {
+      "hq": [
+        26,
+        139,
+        140
+      ],
+      "house": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "goldmine": [
+        13,
+        14,
+        15
+      ],
+      "lumber": [
+        77,
+        78,
+        79
+      ],
+      "supply": [
+        8,
+        9,
+        10
+      ],
+      "metal": [
+        16,
+        17,
+        18
+      ],
+      "storage": [
+        5,
+        6,
+        7
+      ],
+      "infantry": [
+        38,
+        39,
+        40,
+        136
+      ],
+      "range": [
+        41,
+        42,
+        43,
+        137
+      ],
+      "vehicle": [
+        44,
+        45,
+        46,
+        138
+      ],
+      "air": [
+        27,
+        28,
+        198
+      ],
+      "research": [
+        25
+      ],
+      "tower": [
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "cannon": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "wall": [
+        34,
+        35,
+        36,
+        195
+      ],
+      "hospital": [
+        24
+      ],
+      "embassy": [
+        23,
+        188
+      ],
+      "builders": [
+        22
+      ]
+    },
+    "units": {
+      "settler": 500,
+      "swordsman": 510,
+      "lancer": 509,
+      "berserker": 511,
+      "dwarf": 539,
+      "orc": 528,
+      "paladin": 507,
+      "archer": 516,
+      "crossbow": 518,
+      "healer": 502,
+      "elf": 557,
+      "mage": 550,
+      "necromancer": 810,
+      "cavalry": 512,
+      "catapult": 521,
+      "knight": 514,
+      "trebuchet": 522,
+      "golem": 537,
+      "griffin": 812,
+      "wyvern": 684,
+      "ent": 635,
+      "dragon": 649,
+      "phoenix": 744,
+      "ancient": 739,
+      "champion": 533
+    },
+    "nature": {
+      "tree": 19,
+      "rock": 69
+    },
+    "commit": "f642e0bae5a341f48e73b58f2e6d33a8436992c1",
+    "configSource": "config/game_config_20120826.json"
+  }
+}
