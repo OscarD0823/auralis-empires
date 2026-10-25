@@ -1,0 +1,11 @@
+import {UNITS} from './catalog.js';
+export const hudGraphic=(name,cls='')=>'<img class="kingdom-icon '+cls+'" src="./kingdom/icons/'+name+'.svg" alt="" aria-hidden="true" draggable="false">';
+export function garrisonRoster(s,selected,{img,esc}){
+ const groups=new Map();for(const u of s.army.filter(u=>u.hp>0)){if(!groups.has(u.type))groups.set(u.type,[]);groups.get(u.type).push(u);}
+ return '<div class="roster-title"><b>Guarnición</b><button data-action="home-select-all">Seleccionar todas</button></div><div class="roster-cards">'+[...groups].map(([type,units])=>{const active=units.every(u=>selected.includes(u.id)),level=Math.min(...units.map(u=>u.level));return '<button class="roster-card '+(active?'selected':'')+'" data-action="roster-select" data-type="'+type+'" aria-pressed="'+active+'" aria-label="Seleccionar '+units.length+' '+esc(UNITS[type].name)+'"><small>'+esc(UNITS[type].name)+'</small>'+img(type,level,true)+'<b>×'+units.length+'</b><span>Gr. '+level+'</span></button>';}).join('')+(groups.size?'':'<p>Entrena tropas para formar tu guarnición.</p>')+'</div>';
+}
+export function armyInspector(s,selected,{img,esc,fmt,icon}){
+ const army=s.army.filter(u=>selected.includes(u.id)&&u.hp>0);if(!army.length)return null;
+ const first=army[0],types=new Map();for(const u of army)types.set(u.type,(types.get(u.type)||0)+1);
+ return '<div class="panel-top"><div><div class="eyebrow">EJÉRCITO DEL REINO</div><h2>'+esc(army.length===1?UNITS[first.type].name:army.length+' tropas seleccionadas')+'</h2></div><button class="close" data-action="deselect" aria-label="Cerrar selección">'+icon('close')+'</button></div>'+img(first.type,first.level,true)+'<p>Toca suelo libre para mover la selección. Arrastra un recuadro para formar un grupo. La infantería rodea obstáculos; las criaturas voladoras pueden sobrevolarlos.</p><div class="stat-row"><span>Integridad total</span><strong>'+fmt(army.reduce((n,u)=>n+u.hp,0))+'</strong></div>'+[...types].map(([type,n])=>'<div class="stat-row"><span>'+esc(UNITS[type].name)+'</span><strong>×'+n+'</strong></div>').join('')+'<button class="wide" data-action="home-select-all">Seleccionar ejército</button><button class="wide" data-action="home-hold">Detener selección</button>';
+}

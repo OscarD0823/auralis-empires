@@ -13,3 +13,7 @@ La versión web usa un motor Canvas propio; no distribuye ni requiere un reprodu
 Python 3 con Pillow, Java 17+ y [JPEXS FFDec](https://github.com/jindrapetrik/jpexs-decompiler/releases/tag/version26.4.0). Define `FFDEC_JAR` con la ruta a ffdec.jar; opcionalmente `JAVA` con el ejecutable. Ejecuta `python scripts/prepare-sprites.py` y `node scripts/package.mjs`. Las fuentes se descargan de la revisión fija de arriba, se guardan en .reference-cache y no se ejecuta su ActionScript. Los IDs y parámetros seleccionados están en source-data/.
 
 La versión 0.3 añade PICAR para los civiles y BARRIL para los trabajadores de Wars, extraídos de las mismas películas. progression-data.js deriva los umbrales y requisitos de la configuración de esa revisión.
+
+## Terreno y presentación de 0.4
+
+Se incorporan los símbolos `terreno` y `terrenomar2` de la misma revisión fija de Social Empires citada arriba. Los PNG son exportaciones estáticas sin modificación de píxeles; [terrain.json](source-data/terrain.json) conserva URLs, símbolos y SHA-256. `prepare-terrain.py` reproduce la exportación. Los 255 clips direccionales son reorganizaciones sin pérdida adicional de los fotogramas preservados; no se atribuyen sus dibujos a Auralis. Los doce iconos de `dist/kingdom/icons/`, la interfaz, la navegación y la demostración son código y vectores propios. [Alcance de la entrega](docs/KINGDOM-0.4.md).

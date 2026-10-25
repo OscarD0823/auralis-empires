@@ -29,3 +29,7 @@ Los ficheros de source-data/ y dist/classic/atlas.json permiten identificar qué
 Se sustituyeron los trabajadores decorativos por civiles controlables con rutas sobre la cuadrícula, extracción finita y transporte de cargas. Se añadieron las secuencias PICAR del archivo y BARRIL para el transporte en Wars. Los costes y ritmos siguen adaptados: esta implementación no se anuncia como el sistema original completo de aldeanos.
 
 La progresión utiliza los 100 umbrales de experiencia de la configuración de cada archivo. Los desbloqueos se limitan también por el nivel de mando de Auralis; el mínimo de experiencia de cada elemento se adapta a esa campaña. Los niveles y materiales de los guardados existentes se conservan.
+
+## Avance 0.4.0
+
+Se revisaron los dos símbolos de terreno del repositorio de preservación y se integraron sus exportaciones, identificadas en `source-data/terrain.json`. Se añadió una interfaz medieval propia y control de guarnición con rutas, sin sustituir las 25 películas de actores. Las películas ahora se sirven como clips de acción y dirección, conservando los fotogramas. Se mantiene la economía adaptada y el catálogo inicial de 18 edificios y 24 tropas. [Entrega y límites](KINGDOM-0.4.md).

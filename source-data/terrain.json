@@ -1,0 +1,25 @@
+{
+  "repo": "AcidCaos/socialemperors",
+  "commit": "f642e0bae5a341f48e73b58f2e6d33a8436992c1",
+  "extraction": "FFDec sprite export, ignorebackground, first PNG frame; no pixel edits",
+  "assets": [
+    {
+      "id": "grass",
+      "source": "https://raw.githubusercontent.com/AcidCaos/socialemperors/f642e0bae5a341f48e73b58f2e6d33a8436992c1/assets/buildingsprites/terreno.swf",
+      "sourceSha256": "51b2225fa10e4a6407aa018d5959056dcfb7a8ff3f036cd59226bc054d0e26a5",
+      "sprite": 4,
+      "frame": 1,
+      "file": "./classic/terrain/grass.png",
+      "sha256": "64ba00caf32637040713d8cc960ba462f1490f1e05cefa112a4f8bef0a0bfec6"
+    },
+    {
+      "id": "sea",
+      "source": "https://raw.githubusercontent.com/AcidCaos/socialemperors/f642e0bae5a341f48e73b58f2e6d33a8436992c1/assets/buildingsprites/terrenomar2.swf",
+      "sourceSha256": "fa4ae322dd05a56a3d89a896733a5b87a915ad06568ab17d08df11f32ba20ea6",
+      "sprite": 8,
+      "frame": 1,
+      "file": "./classic/terrain/sea.png",
+      "sha256": "c64219e651a635d59cc0b0cfd351538dc7e150b622906db19895d4f4d4f062fc"
+    }
+  ]
+}

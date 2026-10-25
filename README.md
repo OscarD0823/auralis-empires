@@ -1,6 +1,6 @@
 # Auralis Empires
 
-Versión 0.3.0: adaptación web isométrica con los dibujos y las animaciones del archivo de preservación de Social Empires. Construye, recoge producción, mejora edificios, entrena tropas y combate contra IA. Partida local independiente e instalación PWA.
+Versión 0.4.0: adaptación web isométrica con los dibujos y las animaciones del archivo de preservación de Social Empires. Construye, recoge producción, mejora edificios, entrena tropas y combate contra IA. Partida local independiente e instalación PWA.
 
 **No es el cliente original completo.** Se conserva la simulación Auralis (18 edificios, 24 tropas, mejoras de diez niveles, 12 bases de IA y tres dificultades). Sus costes, desbloqueos, misiones y diplomacia son adaptados. Los aspectos originales evolucionan por etapas; no hay diez dibujos distintos para cada edificio.
 
@@ -13,6 +13,12 @@ Versión 0.3.0: adaptación web isométrica con los dibujos y las animaciones de
 - scripts/qa-upgrades.mjs: selección y mejora de edificios en la interfaz.
 
 La vista isométrica usa Canvas 2D y atlas WebP. Los archivos 3D anteriores permanecen como fuente histórica y no se cargan ni se almacenan en la caché del juego actual. Las partidas de 0.1.0 conservan su clave y sus IDs.
+
+## Primer avance del reino en 0.4
+
+Terreno original de Social Empires, interfaz medieval compacta con doce iconos propios y guarnición controlable desde retratos. Los soldados se mueven por grupos alrededor de obstáculos y conservan su posición al guardar y regresar de una batalla. Las sanadoras obedecen órdenes y las bajas no se reviven por error.
+
+El botón Ver reino avanzado abre una demostración independiente con todos los edificios y tropas actuales. Las animaciones se cargan por dirección y acción, el terreno se mantiene en una caché de pantalla y la descarga completa sin conexión es opcional. [Implementación, procedencia, pruebas y límites](docs/KINGDOM-0.4.md).
 
 ## Desarrollo
 

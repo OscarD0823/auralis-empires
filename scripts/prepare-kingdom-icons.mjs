@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+const dir=new URL('../dist/kingdom/icons/',import.meta.url);fs.mkdirSync(dir,{recursive:true});
+const shapes={
+ home:'<path d="M23 30h18v-9h13v9h18v-9h13v9h18v67H23Z" fill="#c7bd97"/><path d="M18 20h10v20H18Zm18 0h10v20H36Zm43 0h10v20H79Zm18 0h10v20H97Z" fill="#e5d6af"/><path d="M49 98V71q15-19 29 0v27Z" fill="#464344"/><path d="M62 22V5l23 7-23 8" fill="#417896"/>',
+ build:'<path d="M24 52 63 23l41 29-8 11-33-23-31 23Z" fill="#a05d35"/><path d="M34 57h58v45H34Z" fill="#e3caa0"/><path d="M57 74h17v28H57Z" fill="#48616d"/><path d="m81 25 9-13 18 14-9 13-20 40-10-6Z" fill="#c3c6b7"/>',
+ army:'<path d="m26 16 16 5 45 64-9 7-44-63Z" fill="#dce5dd"/><path d="m95 16-16 5-45 64 9 7 44-63Z" fill="#b6d0d7"/><path d="m27 76 24 17-6 8-25-18Zm55 1 22 17-6 8-23-18Z" fill="#dfb95c"/><path d="m30 88-13 16 8 6 12-14Zm60 2 13 16-8 6-13-15Z" fill="#705139"/>',
+ worker:'<path d="m31 30 13-13 61 57-12 13Z" fill="#d2d5bf"/><path d="M71 55 79 65 32 110l-10-9Z" fill="#aa7243"/><path d="m27 24 12-13 26 23-13 14Z" fill="#e4c887"/>',
+ campaign:'<path d="m15 32 31-14 34 13 31-13v78L80 109 46 95l-31 14Z" fill="#e9dcb6"/><path d="M46 18v77m34-64v78" fill="none" stroke="#a9976d" stroke-width="3"/><path d="m28 81 17-19 20 9 26-30" fill="none" stroke="#9b653d" stroke-width="5" stroke-dasharray="6 5"/><path d="M89 28h8v30h-8Zm8 0 17 8-17 8" fill="#3f7b97"/>',
+ tasks:'<path d="M32 17h56v83H32Z" fill="#ead9ac"/><path d="M24 17q0-13 14-13h59v18H38q-14 0-14-5Zm65 68h14v16q0 17-19 17H27v-17h57q8 0 5-16Z" fill="#bfa477"/><path d="m43 44 5 5 9-12m-14 28 5 5 9-12M64 45h17M64 65h17" fill="none" stroke="#4a797a" stroke-width="4"/>',
+ gold:'<ellipse cx="62" cy="72" rx="41" ry="25" fill="#b08032"/><ellipse cx="62" cy="62" rx="41" ry="25" fill="#e1b650"/><ellipse cx="62" cy="53" rx="41" ry="25" fill="#f3d77b"/><ellipse cx="62" cy="53" rx="29" ry="17" fill="none" stroke="#b18131" stroke-width="3"/><path d="m62 40 5 8 10 2-7 7 1 10-9-5-9 5 2-10-8-7 11-2Z" fill="#b18131"/>',
+ wood:'<path d="m17 74 49-39 36 17-51 40Z" fill="#a27145"/><path d="m19 62 50-38 34 16-49 40Z" fill="#c69b61"/><ellipse cx="36" cy="80" rx="22" ry="17" fill="#e6c58b"/><ellipse cx="85" cy="36" rx="21" ry="16" fill="#e3c38b"/><ellipse cx="36" cy="80" rx="12" ry="10" fill="none" stroke="#956c40" stroke-width="3"/>',
+ supply:'<path d="M41 19h44l5 73q-25 23-53 0Z" fill="#c5a56a"/><path d="M41 19q22-12 44 0L74 30H51Z" fill="#e7cc95"/><path d="M61 79V43m0 22-11-9m11 2 11-10m-11 3-9-10m9 4 10-12" fill="none" stroke="#f0dc83" stroke-width="6" stroke-linecap="round"/><path d="m45 24 38 0" stroke="#78633f" stroke-width="5"/>',
+ metal:'<path d="m18 67 26-30 45 2 21 35-32 26-50-4Z" fill="#8c9890"/><path d="m18 67 37 11 23 22-50-4Z" fill="#69766f"/><path d="m44 37 15 24 30-22 21 35-51-13-4 17-37-11Z" fill="#c9d1be"/><path d="m59 61 19 39 32-26Z" fill="#a3ad9f"/>',
+ rank:'<path d="m63 10 14 31 34 4-26 24 8 34-30-16-30 16 7-34-26-24 35-4Z" fill="#e3bf62"/><path d="m63 29 7 20 23 3-17 15 4 22-17-12-18 12 5-22-18-15 23-3Z" fill="#f7e4a0"/>',
+ crown:'<path d="m23 39 20 18 19-35 20 35 23-18-10 53H32Z" fill="#ddbb61"/><path d="M33 91h62v14H33Z" fill="#f3d88c"/><circle cx="23" cy="36" r="7" fill="#f8df8f"/><circle cx="63" cy="19" r="7" fill="#f8df8f"/><circle cx="105" cy="36" r="7" fill="#f8df8f"/><path d="m63 60 9 12-9 12-9-12Z" fill="#4b8a9e"/>'
+};
+for(const[name,shape]of Object.entries(shapes))fs.writeFileSync(new URL(name+'.svg',dir),'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><g stroke="#634d30" stroke-width="2" stroke-linejoin="round">'+shape+'</g></svg>');
+console.log('Doce iconos medievales propios.');
